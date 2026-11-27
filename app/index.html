@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bargain Beacon — Real Black Friday Deals, Checked Today</title>
+<meta name="description" content="50 real Black Friday deals from 8 stores, each price checked on 27 Nov 2026, with an honest verdict on whether it is really a deal.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="beacon" aria-hidden="true"><span class="beam"></span></span>
+      <div>
+        <h1>Bargain Beacon</h1>
+        <p class="tagline">Real Black Friday deals, checked today — not every red sticker is a bargain.</p>
+      </div>
+    </div>
+    <p class="window">Black Friday 27 Nov – Cyber Monday 30 Nov 2026</p>
+  </div>
+</header>
+
+<main>
+  <section class="stats" aria-label="Sale at a glance">
+    <div class="stat"><span class="stat-num" id="stat-deals">–</span><span class="stat-label">verified deals</span></div>
+    <div class="stat"><span class="stat-num" id="stat-stores">–</span><span class="stat-label">stores</span></div>
+    <div class="stat"><span class="stat-num" id="stat-newlow">–</span><span class="stat-label">new lows</span></div>
+    <div class="stat"><span class="stat-num" id="stat-avg">–</span><span class="stat-label">average discount</span></div>
+    <div class="stat"><span class="stat-num" id="stat-saved">–</span><span class="stat-label">total savings if you bought one of each</span></div>
+  </section>
+  <p class="best-line">Top scored deal right now: <strong id="stat-best">–</strong></p>
+
+  <section class="toolbar" id="toolbar" aria-label="Find a deal">
+    <input id="q" type="search" placeholder="Search a product, brand or store…" aria-label="Search deals">
+    <select id="cat" aria-label="Filter by category"></select>
+    <select id="store" aria-label="Filter by store"></select>
+    <select id="minpct" aria-label="Minimum discount">
+      <option value="0">Any discount</option>
+      <option value="20">20% off or more</option>
+      <option value="30">30% off or more</option>
+      <option value="40">40% off or more</option>
+      <option value="50">50% off or more</option>
+    </select>
+    <select id="sig" aria-label="Filter by deal verdict">
+      <option value="all">Any verdict</option>
+      <option value="new-low">New low only</option>
+      <option value="strong">Strong price only</option>
+      <option value="routine">Routine sale only</option>
+    </select>
+    <select id="sort" aria-label="Sort deals">
+      <option value="score">Sort: Deal Score</option>
+      <option value="pct">Sort: Biggest discount</option>
+      <option value="save">Sort: Most cash saved</option>
+      <option value="price-asc">Sort: Lowest price</option>
+      <option value="price-desc">Sort: Highest price</option>
+    </select>
+    <button id="clear" type="button">Clear</button>
+  </section>
+
+  <p id="count-line" class="count" aria-live="polite"></p>
+
+  <section id="deal-list" class="grid" aria-label="Deals"></section>
+  <section id="deal-detail" hidden aria-label="Deal detail"></section>
+</main>
+
+<footer>
+  <h2>How these deals were checked</h2>
+  <p>Every price on this page was read on 27 November 2026 from a deals source that names the store — a store roundup (Mashable Black Friday ads), a same-day news report (TradingView/Benzinga), a dated deals diary, or a retailer roundup (DealNews, Tom’s Guide, Yahoo, CNET). Each deal card names its source and the evidence behind its verdict. Prices move all day on Black Friday; confirm the price at the store before you pay.</p>
+  <p>The verdict on each deal is honest on purpose: <strong>New low</strong> means the lowest price the sources have ever recorded for that product. <strong>Strong price</strong> means a large cut on a real usual price. <strong>Routine sale</strong> means a modest or frequently repeated cut — worth buying only if you wanted it anyway. Where a store lists a “comparable value” instead of a past price, the card says so next to the usual price.</p>
+  <p>Deal Score (0–100) weighs the discount most, then the verdict, then the cash saved. Store links go to the store’s own search for the exact product. This site loads nothing from the network and stores nothing about you.</p>
+  <p id="checked-line" class="checked"></p>
+  <p class="fine">Bargain Beacon is an independent deal guide built for Black Friday 2026. Product and store names belong to their owners. Prices in US dollars.</p>
+</footer>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
